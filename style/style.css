@@ -16,11 +16,13 @@ body{
 /* Header */
 
 header{
-    height: 50px;
+    height: 4vw;
     background-color: black;
     border-bottom: 1px solid white;
-
+    display: flex;
+    justify-content: space-between;
 }
+
 
 .headerWithMe{
     position: fixed;
@@ -30,23 +32,18 @@ header{
     z-index: 1;
 }
 
-nav{
-    display: inline-block;
-    height: 100%;
-    width: 40%;
-    padding-left: 50px;
-}
-
 nav ul {
-  margin: 0;
+  margin: 0px;
   height: 100%;
   display: flex;
 }
 
 nav li {
   display: flex;
-  height: 100%;
+  height: 4vw;
   box-sizing: border-box;
+  align-items: center;
+  transition: .5s background-color;
 }
 
 nav li a{
@@ -54,26 +51,35 @@ nav li a{
     text-decoration: none;
     display: inline-block;
     color: white;
-    font: bold 1em "Open Sans";
-    line-height: 51px;
-    padding: 0em 1.7em;
+    font: bold 1vw "Open Sans";
+
+    padding: 0em 3vw;
 }
 
 #actual-page {
     border-bottom: 5px solid orange;
+    padding-top: 5px
+}
+
+nav li:hover {
+     background-color: grey;
+     transition: .5s;
 }
 
 input[type="search"]{
-    width: 300px;
+    width: 20vw;
+    height: 2vw;
     border: none;
     border-bottom: 1px solid orange;
     background-color: black;
-    font: bold 12px "Open Sans";
+    font: 1.7vw "Open Sans";
     color: white;
+    margin-top: 1vw;
 }
 
 header form {
   display:inline-block;
+  padding-right: min(200px, 5%);
 }
 
 input[type="search"]:focus {
