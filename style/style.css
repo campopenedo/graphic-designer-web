@@ -16,11 +16,20 @@ body{
 /* Header */
 
 header{
+    position: fixed;
+    width: 100%;
     height: 4vw;
     background-color: black;
     border-bottom: 1px solid white;
     display: flex;
     justify-content: space-between;
+    opacity: .9;
+    transition: .5s opacity;
+}
+
+header:hover{
+  opacity: 1;
+  transition: .5s opacity;
 }
 
 
@@ -52,7 +61,6 @@ nav li a{
     display: inline-block;
     color: white;
     font: bold 1vw "Open Sans";
-
     padding: 0em 3vw;
 }
 
@@ -96,29 +104,27 @@ input[type="submit"].btn-buscar {
 
 
 .nombre{
-    padding-top: 35px;
-    padding-left: 55px;
+    padding-top: 8vw;
+    padding-left: 5vw;
+    width: 21vw;
 }
 
 .nombre p{
-    font: 19px "Open Sans";
+    font: 1.6vw "Open Sans";
+    letter-spacing: 1px;
     color: white;
-    margin-bottom: -10px;
+    margin-bottom: 0px;
 }
 
 .nombre h1{
     color:white;
-    font: bold 30px "Open Sans";
+    font: 2.9vw "Open Sans";
     margin-top: 0px;
 }
 
 .nombre h1 span{
     color: white;
-    font: bolder 30px "Open Sans";
-  text-shadow: 1px  0px 0px white,
-               0px  1px 0px white,
-              -1px  0px 0px white,
-               0px -1px 0px white;
+    font: bold 2.9vw "Open Sans";
 }
 
 footer{
@@ -127,17 +133,45 @@ footer{
   bottom: 0;
   width: 100%;
   color: white;
-    height: 120px;
+    height: 160px;
 }
-.footer-left{
+.redes {
     display: inline-block;
+    height: 100%;
     float: left;
     color: white;
     font: bolder 11px "Open Sans";
     margin-left: 12px;
 }
 
-.footer-right{
+.redes ul {
+  height: 100%;
+}
+
+.redes li {
+  list-style-position: inside;
+  padding-bottom: 10px;
+}
+
+.redes ul p {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+}
+
+.redes li#instagram {
+  list-style: url("/media/imagenes/instagram.png");
+
+}
+
+.redes li#youtube {
+  list-style: url("/media/imagenes/youtube.png");
+}
+.redes li#be {
+  list-style: url("/media/imagenes/be.png");
+}
+
+.ultimos-renders{
     display: inline-block;
     float: right;
     width: 60%;
@@ -146,12 +180,12 @@ footer{
     color: black;
 
 }
-.footer-right img{
+.ultimos-renders img{
     height: 100%;
     display: inline-block
 }
 
-.footer-right-text h1{
+.texto-ultimo-render h1{
     display:block;
     vertical-align: top;
     font: bold 13px "Open Sans";
@@ -162,17 +196,14 @@ footer{
     margin-bottom: 0px;
 }
 
-.footer-right-text p{
+.texto-ultimo-render p{
     display:block;
     font: bold 13px "Open Sans";
     color:white;
     margin: 0px;
 }
-.footer-right-image{
-    display:inline-block;
-    height: 100%;
-}
-.footer-right-text{
+
+.texto-ultimo-render{
     display: inline-block;
     height: 100%;
     vertical-align: top;
@@ -203,4 +234,56 @@ footer{
     width: 65%;
     display: inline-block;
     color: white;
+}
+
+@media screen and (max-width: 1300px) {
+
+header {
+  height: 53px;
+}
+
+nav li {
+  height: 100%;
+}
+
+nav li a, input.buscador {
+  font-size: 14px;
+}
+
+section.nombre {
+  padding-top: 100px;
+}
+
+@media screen and (max-width: 980px) {
+  section.nombre {
+    width: auto;
+  }
+  section.nombre p {
+    font-size:16px;
+  }
+
+  section.nombre h1 {
+    font-size:28px;
+  }
+
+  section.nombre h1 span {
+    font-size:28px;
+  }
+  @media screen and (max-width: 620px) {
+    header {
+      display: flex;
+      justify-content: center;
+    }
+    header form {
+      visibility: hidden;
+      display: none;
+    }
+  }
+}
+}
+
+@media screen and (min-width: 2315px) {
+  .nombre h1{
+      font: 2.7vw "Open Sans";
+  }
 }
