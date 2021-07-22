@@ -3,13 +3,18 @@ body{
     margin: 0px 0px;
     background-color: black;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-attachment: fixed;
     background-color: black;
     background-size: cover;
     position: relative;
-    min-height: 600px;
     background-image: url('./../media/imagenes/ICE_RENDER0004.png');
+}
+
+body#with-me {
+  margin: 0px 0px;
+  background-color: black;
+  background-image: none;
 }
 
 
@@ -61,7 +66,7 @@ nav li a{
     display: inline-block;
     color: white;
     font: bold 1vw "Open Sans";
-    padding: 0em 3vw;
+    padding: 1.3em 3vw;
 }
 
 #actual-page {
@@ -127,14 +132,15 @@ input[type="submit"].btn-buscar {
     font: bold 2.9vw "Open Sans";
 }
 
-footer{
+footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
-    height: 160px;
+  height: 140px;
 }
+
 .redes {
     display: inline-block;
     height: 100%;
@@ -145,30 +151,30 @@ footer{
 }
 
 .redes ul {
-  height: 100%;
-}
-
-.redes li {
-  list-style-position: inside;
-  padding-bottom: 10px;
-}
-
-.redes ul p {
-  text-align: center;
-  vertical-align: middle;
-  display: flex;
+  list-style: none;
 }
 
 .redes li#instagram {
-  list-style: url("/media/imagenes/instagram.png");
-
+  background: url("/media/imagenes/instagram.png");
 }
 
 .redes li#youtube {
-  list-style: url("/media/imagenes/youtube.png");
+  background: url("/media/imagenes/youtube.png");
 }
 .redes li#be {
-  list-style: url("/media/imagenes/be.png");
+  background: url("/media/imagenes/be.png");
+}
+
+.redes li#instagram, .redes li#youtube, .redes li#be {
+  height: 30px;
+  padding-left: 35px;
+  background-repeat:no-repeat;
+  padding-top: 9px;
+}
+
+.redes li a {
+  color: white;
+  text-decoration: none;
 }
 
 .ultimos-renders{
@@ -230,10 +236,15 @@ footer{
   padding-bottom: 400px;
 }
 
-#textWithMe{
-    width: 65%;
+main#with-me {
+  height: 100%;
+
+}
+
+#text-with-me{
     display: inline-block;
     color: white;
+    background-color: pink;
 }
 
 @media screen and (max-width: 1300px) {
@@ -251,7 +262,8 @@ nav li a, input.buscador {
 }
 
 section.nombre {
-  padding-top: 100px;
+  padding-top: min(100px);
+
 }
 
 @media screen and (max-width: 980px) {
