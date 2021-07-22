@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body id="bodyIndex">
-            <header>
-                <div class="header-left">
-                    <a id="actualPage"  href="inicio.html">HOME</a>
-                    <a href="#">GALLERY</a>
-                    <a href="#">CONTACT</a>
-                    <a href="withme.html">WITH ME</a>
-                </div>
-                <div class="header-middle">
-                    <input class="buscador" type="text"/>
-                </div>
-            </header>
-            <article class="nombre">
-                <p>Elias Garrote Lamigueiro</p>
+<body>
+  <header>
+      <nav>
+        <ul>
+          <li id="actual-page"><a href="inicio.html">HOME</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">WITH ME</a></li>
+        </ul>
+      </nav>
+      <form>
+          <input type="search" class="buscador"/>
+          <input type="submit" class="btn-buscar" value="&#8981;">
+      </form>
+  </header>
+            <section class="nombre">
+                <p>Elías Garrote Lamigueiro</p>
                 <h1><span>C4D</span>DESINGER</h1>
-            </article>
+            </section>
         <footer>
-            <div class="footer-left">
-                <p> @mrtortitas</p>
-                <p> @mrtortitas</p>
-                <p> @mrtortitas</p>
-            </div>
-            <div class="footer-right">
-                    <div class="footer-right-image">
-                        <img class="imagenfooter" src="imagenes/imagenDePrueba.png">
-                    </div>
-                    <div class="footer-right-text">
+            <section class="redes">
+              <ul>
+                <li id="instagram">@mrtortitas</li>
+                <li  id="youtube"> @mrtortitas</li>
+                <li id="be"> @mrtortitas</li>
+              </ul>
+            </section>
+            <section class="ultimos-renders">
+                        <img class="imagen-ultimo-render" src="media/imagenes/imagenDePrueba.png">
+                    <section class="texto-ultimo-render">
                         <h1>NEW RENDERS</h1>
                         <p>In a few days you can see our ultimate renders</p>
-                    </div>
-            </div>
+                    </section>
+            </section>
         </footer>
 </body>
 </html>
