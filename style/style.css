@@ -3,7 +3,8 @@ body{
     margin: 0px 0px;
     background-color: black;
     width: 100%;
-    min-height: 100%;
+    min-height: 800px;
+    height: 99vh;
     background-attachment: fixed;
     background-color: black;
     background-size: cover;
@@ -11,7 +12,13 @@ body{
     background-image: url('./../media/imagenes/ICE_RENDER0004.png');
 }
 
-body#with-me {
+body#about-me {
+  margin: 0px 0px;
+  background-color: black;
+  background-image: none;
+}
+
+body#contact-me {
   margin: 0px 0px;
   background-color: black;
   background-image: none;
@@ -133,7 +140,7 @@ input[type="submit"].btn-buscar {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -215,11 +222,15 @@ footer {
     vertical-align: top;
 }
 
+
+
 .fotoAutor{
     position: sticky;
     display: inline-block;
-    width: 33%;
-    margin-top: -50;
+    margin-top: 100px;
+    margin-left: -100px;
+    width: 350%;
+    min-width: 400px;
     z-index: -1;
 }
 
@@ -238,13 +249,45 @@ footer {
 
 main#with-me {
   height: 100%;
-
+  display: flex;
 }
 
-#text-with-me{
+.text-with-me {
     display: inline-block;
     color: white;
-    background-color: pink;
+    font-size:calc(10px + 1.5vw);
+    font-weight: bold;
+    font-family: "Open Sans";
+    text-transform:uppercase;
+    margin-top: calc(80px + 7.5vw);
+    letter-spacing: 2px;
+}
+
+.text-with-me > h1 {
+
+  margin: 0px 0px;
+}
+
+.text-with-me > p {
+  font-weight: normal;
+  text-transform: none;
+  margin: 20px 0px;
+  font-size: 1em;
+}
+
+.text-with-me article {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
+
+
+.text-with-me article p {
+  font-weight: normal;
+  text-transform: none;
+  margin: 20px 0px;
+  font-size: .65em;
 }
 
 @media screen and (max-width: 1300px) {
@@ -265,30 +308,61 @@ section.nombre {
   padding-top: min(100px);
 
 }
-
-@media screen and (max-width: 980px) {
-  section.nombre {
-    width: auto;
-  }
-  section.nombre p {
-    font-size:16px;
+@media screen and (max-width: 1030px) {
+  figure.fotoAutor {
+    margin-right: 0px;
   }
 
-  section.nombre h1 {
-    font-size:28px;
+  .text-with-me {
+    margin-top: 120px;
+    margin-right: 20px;
+  }
+  .text-with-me article {
+    display: block;
   }
 
-  section.nombre h1 span {
-    font-size:28px;
+  .text-with-me h1 {
+    text-align: center;
   }
-  @media screen and (max-width: 620px) {
-    header {
-      display: flex;
-      justify-content: center;
+  @media screen and (max-width: 980px) {
+    section.nombre {
+      width: auto;
     }
-    header form {
-      visibility: hidden;
-      display: none;
+    section.nombre p {
+      font-size:16px;
+    }
+
+    section.nombre h1 {
+      font-size:28px;
+    }
+
+    section.nombre h1 span {
+      font-size:28px;
+    }
+    @media screen and (max-width: 620px) {
+      header {
+        display: flex;
+        justify-content: center;
+      }
+      header form {
+        visibility: hidden;
+        display: none;
+      }
+
+      figure.fotoAutor {
+        display: none;
+      }
+
+      section.text-with-me {
+        text-align: center;
+        margin-left: 20px;
+        background-color: rgba(0,0,0, .9);
+
+      }
+
+      body#about-me {
+        background-image: url("/media/imagenes/foto-elias.jpg");
+      }
     }
   }
 }
