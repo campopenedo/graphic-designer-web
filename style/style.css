@@ -9,7 +9,6 @@ html {
   box-sizing: inherit;
 }
 body{
-    position: absolute;
     margin: 0;
     background-color: black;
     width: 100%;
@@ -20,13 +19,7 @@ body{
     justify-content: space-between;
 }
 
-body#about-me {
-  margin: 0px 0px;
-  background-color: black;
-  background-image: none;
-}
-
-body#contact-me {
+body#about-me, body#contact-me {
   margin: 0px 0px;
   background-color: black;
   background-image: none;
@@ -66,15 +59,6 @@ header{
 header:hover{
   opacity: 1;
   transition: .5s opacity;
-}
-
-
-.headerWithMe{
-    position: fixed;
-    height: 50px;
-    background-color: black;
-    border-bottom: 1px solid white;
-    z-index: 1;
 }
 
 nav ul {
@@ -164,7 +148,7 @@ input[type="submit"].btn-buscar {
 .nombre{
     padding-top: 8vw;
     padding-left: 5vw;
-    width: 21vw;
+    width: 32vw;
 }
 
 .nombre p{
@@ -181,12 +165,10 @@ input[type="submit"].btn-buscar {
 }
 
 .nombre h1 span{
-    color: white;
     font: bold 2.9vw "Open Sans";
 }
 
 footer {
-
   width: 100%;
   color: white;
   height: 140px;
@@ -205,14 +187,14 @@ footer {
 }
 
 .redes li#instagram {
-  background: url("/media/imagenes/instagram.png");
+  background: url("../media/imagenes/instagram.png");
 }
 
 .redes li#youtube {
-  background: url("/media/imagenes/youtube.png");
+  background: url("../media/imagenes/youtube.png");
 }
 .redes li#be {
-  background: url("/media/imagenes/be.png");
+  background: url("../media/imagenes/be.png");
 }
 
 .redes li#instagram, .redes li#youtube, .redes li#be {
@@ -268,7 +250,7 @@ footer {
 
 
 
-.fotoAutor{
+.foto-autor-carta{
     position: sticky;
     display: inline-block;
     margin-top: 100px;
@@ -278,7 +260,7 @@ footer {
     z-index: -1;
 }
 
-.fotoElias{
+.foto-autor{
     width:100%;
 }
 
@@ -309,7 +291,6 @@ main#with-me {
 }
 
 .text-with-me > h1 {
-
   margin: 0px 0px;
 }
 
@@ -336,7 +317,6 @@ main#with-me {
 }
 
 @media screen and (max-width: 1300px) {
-
 header {
   height: 53px;
 }
@@ -354,7 +334,10 @@ section.nombre {
 
 }
 @media screen and (max-width: 1030px) {
-  figure.fotoAutor {
+  body#gallery {
+    height: auto;
+  }
+  figure.foto-autor-carta {
     margin-right: 0px;
   }
 
@@ -362,6 +345,7 @@ section.nombre {
     margin-top: 120px;
     margin-right: 20px;
   }
+
   .text-with-me article {
     display: block;
   }
@@ -396,16 +380,23 @@ section.nombre {
       font-size:28px;
     }
     @media screen and (max-width: 620px) {
+
+      body {
+        padding-bottom: 20px;
+      }
+      
       header {
         display: flex;
         justify-content: center;
+        top: 0px;
       }
+
       header form {
         visibility: hidden;
         display: none;
       }
 
-      figure.fotoAutor {
+      figure.foto-autor-carta {
         display: none;
       }
 
@@ -431,8 +422,11 @@ section.nombre {
 
       footer {
         display: grid;
+        height: auto;
         grid-template-columns: 1fr;
         place-items: center;
+        bottom: 20px;
+        padding-bottom: 20px;
       }
 
       section.redes {
@@ -444,7 +438,7 @@ section.nombre {
       }
       section.ultimos-renders {
         margin-top: 60px;
-        padding-bottom: 20px;
+
       }
 
     }
