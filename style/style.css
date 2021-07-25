@@ -305,6 +305,7 @@ main#with-me {
     text-transform:uppercase;
     margin-top: calc(80px + 7.5vw);
     letter-spacing: 2px;
+    height: contain;
 }
 
 .text-with-me > h1 {
@@ -430,7 +431,7 @@ section.nombre {
 
       footer {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         place-items: center;
       }
 
@@ -442,7 +443,8 @@ section.nombre {
         padding-left: 0px;
       }
       section.ultimos-renders {
-        margin-top: 50px;
+        margin-top: 60px;
+        padding-bottom: 20px;
       }
 
     }
